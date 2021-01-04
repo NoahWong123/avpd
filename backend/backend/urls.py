@@ -1,4 +1,4 @@
-"""avpd URL Configuration
+"""backend URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -17,10 +17,10 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
 
-from avpd import avpd_rest
+from backend import api
 
 urlpatterns = [
-    path('', include('avpd.avpd_rest.urls')),
+    path('', include('backend.api.urls')),
     path('rest-auth/', include('rest_auth.urls')),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('admin/', admin.site.urls),
