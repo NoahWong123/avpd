@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.core.files.storage import FileSystemStorage
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -37,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # 'backend.api',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -47,7 +49,6 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'rest_framework',
     'rest_framework.authtoken',
-    'user',
     'backend.api.apps.AvpdRestConfig',
 ]
 
@@ -57,7 +58,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.RemoteUserMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -165,7 +166,10 @@ REST_FRAMEWORK = {
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication'
-    )
+    ),
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+    ]
 }
 
 JWT_AUTH = {
@@ -174,7 +178,7 @@ JWT_AUTH = {
     'JWT_DECODE_HANDLER':
         'backend.api.utils.jwt_decode_token',
     'JWT_ALGORITHM': 'RS256',
-    'JWT_AUDIENCE': 'https://api.avpd/',
+    'JWT_AUDIENCE': 'https://api.avpd',
     'JWT_ISSUER': 'https://avpd.us.auth0.com/',
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
@@ -186,13 +190,15 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-AUTH_USER_MODEL = 'user.User'
+AUTH_USER_MODEL = 'api.User'
 
-REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'user.serializers.UserSerializer',
-    'TOKEN_SERIALIZER': 'user.serializers.TokenSerializer'
-}
+MEDIA_ROOT = BASE_DIR / 'media'
 
-REST_AUTH_REGISTER_SERIALIZERS = {
-    'REGISTER_SERIALIZER': 'user.serializers.CustomRegisterSerializer',
-}
+# REST_AUTH_SERIALIZERS = {
+#     'USER_DETAILS_SERIALIZER': 'user.serializers.UserSerializer',
+#     'TOKEN_SERIALIZER': 'user.serializers.TokenSerializer'
+# }
+#
+# REST_AUTH_REGISTER_SERIALIZERS = {
+#     'REGISTER_SERIALIZER': 'user.serializers.CustomRegisterSerializer',
+# }

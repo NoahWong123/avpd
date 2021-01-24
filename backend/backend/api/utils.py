@@ -9,7 +9,7 @@ import requests
 # These are here for Auth0 stuff
 def jwt_get_username_from_payload_handler(payload):
     username = payload.get('sub').replace('|', '.')
-    authenticate(remote_user=username)
+    # authenticate(remote_user=username)
 
     return username
 
@@ -26,4 +26,10 @@ def jwt_decode_token(token):
         raise Exception('Public key not found.')
 
     issuer = 'https://{}/'.format('avpd.us.auth0.com')
-    return jwt.decode(token, public_key, audience='https://api.avpd/', issuer=issuer, algorithms=['RS256'])
+    audience = 'https://api.avpd'
+    # audience = 'https://avpd.us.auth0.com/auth/v2/'
+    return jwt.decode(token, public_key, audience=audience, issuer=issuer, algorithms=['RS256'])
+
+
+def location(request, path):
+    return '{scheme}://{host}'.format(scheme=request.scheme, host=request.get_host()) + path
