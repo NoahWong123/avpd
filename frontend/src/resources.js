@@ -1,4 +1,4 @@
-const bell = require('./bell.jpeg');
-const defaultAvatar = require('./default-avatar.jpeg');
+const bell = require('./images/bell.jpeg');
+const defaultAvatar = require('./images/default-avatar.jpeg');
 
 export {bell, defaultAvatar}
