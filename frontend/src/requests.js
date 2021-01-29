@@ -17,12 +17,16 @@ export async function getClassrooms(token) {
   return axios.get(`${serverUrl()}/instructor/classrooms`, requestConfig)
 }
 
-export async function createClassroom(token) {
+export async function createClassroom(title, token) {
   let requestConfig = {}
+
+  const data = {
+    'title': title
+  }
 
   requestConfig = await authenticateRequest(requestConfig, token)
 
-  return axios.post(`${serverUrl()}/instructor/classrooms`, requestConfig)
+  return axios.post(`${serverUrl()}/instructor/classrooms`, data, requestConfig)
 }
 
 export async function deleteClassroom(classroomID, token) {

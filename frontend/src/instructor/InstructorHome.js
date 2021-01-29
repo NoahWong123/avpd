@@ -26,7 +26,7 @@ function Classrooms() {
         setClassroomTitles(
           response.data.map((data) => <li>
             <button onClick={() => {
-              deleteClassroom(data['id']).then(() => history.push('/'))
+              deleteClassroom(data['id'], token).then(() => history.push('/'), (error) => console.log(error.response))
             }}>
               {data['title']}
             </button>
@@ -66,9 +66,9 @@ export function CreateClassroomForm() {
 
   function handleSubmit(event) {
     getAccessTokenSilently().then((token) => {
-      createClassroom(token).then((response) => {
+      createClassroom(title, token).then((response) => {
         history.push('/')
-      })
+      }, (error) => console.log(error.response))
     })
 
     event.preventDefault()
