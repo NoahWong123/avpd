@@ -15,7 +15,9 @@ The topics within our problem domain are English literature, plagiarism, and sta
 Below are some resources related to our problem domain:
 
 https://medium.com/@HJRomero25/why-i-absolutely-protest-turnitin-a9b3f38ab24a
+
 https://www.insidehighered.com/news/2013/04/16/writing-professors-question-plagiarism-detection-software
+
 Stamatatos, E. (2009), A survey of modern authorship attribution methods. J. Am. Soc. Inf. Sci., 60: 538-556. doi:10.1002/asi.21001
 
 #### Websites useful/related to this project
