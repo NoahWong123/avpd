@@ -10,7 +10,13 @@ Jared do this part
 
 #### Problem Domain Book
 
-Gage
+The topics within our problem domain are English literature, plagiarism, and statistics. Literature knowledge is important for making informed decisions about the authenticity of a document that don't just come from the statistics we gather. Plagiarism is also something that we need to understand, not just what it is and how to detect it but also public opinion about plagiarism. Statistics are incredibly important to understand as we need to leverage statistics when verifying the author of a document.
+
+Below are some resources related to our problem domain:
+
+https://medium.com/@HJRomero25/why-i-absolutely-protest-turnitin-a9b3f38ab24a
+https://www.insidehighered.com/news/2013/04/16/writing-professors-question-plagiarism-detection-software
+Stamatatos, E. (2009), A survey of modern authorship attribution methods. J. Am. Soc. Inf. Sci., 60: 538-556. doi:10.1002/asi.21001
 
 #### Websites useful/related to this project
 
