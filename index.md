@@ -1,6 +1,28 @@
 ## Authorship Verification for Plagiarism Detection
 
-<Project Description>
+### Project Description
+
+Jared do this part
+
+### Advisors
+
+### Project Related Resources
+
+#### Problem Domain Book
+
+Gage
+
+#### Websites useful/related to this project
+
+Daniel
+
+#### Technical Reports
+
+Hayden
+
+#### News
+
+Noah
 
 ## Welcome to GitHub Pages
 
