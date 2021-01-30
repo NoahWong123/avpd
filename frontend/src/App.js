@@ -4,6 +4,7 @@ import {Switch} from 'react-router';
 import React from "react";
 import {Home} from "./Home";
 import {CreateClassroomForm} from "./instructor/InstructorHome";
+import About from "./About";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function Main() {
     <Switch>
       <Route exact path="/" component={Home}/>
       <Route exact path="/create-classroom" component={CreateClassroomForm}/>
+      <Route exact path="/about" component={About}/>
     </Switch>
   )
 }

@@ -1,2 +1,3 @@
 envs/
-.idea/
+**/.idea/
+**/.ipynb_notebooks/
