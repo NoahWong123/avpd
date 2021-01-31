@@ -30,7 +30,24 @@ Hayden
 
 #### News
 
-Noah
+
+How Artificial Intelligence Can Spot Essay Writing Cheats and Raise Standards
+
+https://www.wales247.co.uk/how-artificial-intelligence-can-spot-essay-writing-cheats-and-raise-standards/
+
+6 Accessible Essay Writing Services
+
+https://goodmenproject.com/education-2/6-accessible-essay-writing-services/
+
+Intrinsic Plagiarism Detection Using Character n-gram Profiles
+
+http://ceur-ws.org/Vol-502/paper8.pdf
+
+An integrated approach for intrinsic plagiarism detection
+
+https://www.sciencedirect.com/science/article/abs/pii/S0167739X17326018
+
+
 
 ## Welcome to GitHub Pages
 
